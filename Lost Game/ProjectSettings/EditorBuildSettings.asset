@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Interfaz_Placa.unity
     guid: f6de1954c1dbf4e36b21ba08938c19d8
+  - enabled: 1
+    path: Assets/Scenes/Oso_Interfaz.unity
+    guid: a2a124ef257e24b9490a69d624473997
   m_configObjects: {}
