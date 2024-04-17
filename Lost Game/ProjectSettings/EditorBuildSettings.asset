@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Interfaz inicio.unity
+    guid: e8befc68e0af444e49d9a7c6253de0c7
+  - enabled: 1
     path: Assets/Scenes/Lost_Escene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Interfaz_Placa.unity
+    guid: f6de1954c1dbf4e36b21ba08938c19d8
   m_configObjects: {}
