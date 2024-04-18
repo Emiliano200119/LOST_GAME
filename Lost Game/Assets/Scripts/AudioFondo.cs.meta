@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: c1b2625dc6b2f47309b373c9518812c8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - musicaDeFondo: {fileID: 8300000, guid: ac01990777cde4e65b5bc922a719634f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
