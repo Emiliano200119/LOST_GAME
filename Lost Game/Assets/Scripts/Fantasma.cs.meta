@@ -3,7 +3,8 @@ guid: 457b5bdfa5f864a96bf76e036bec4914
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - sonidoFantasma: {fileID: 8300000, guid: e03c62e0ea46e4edaac577e62f6189ca, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
