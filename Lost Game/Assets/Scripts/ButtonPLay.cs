@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class BotonPlay : MonoBehaviour
 {
-    public void CargarSiguienteEscena()
+    public void CargarEscena()
     {
-        SceneManager.LoadScene("Lost_Escene");
+        SceneManager.LoadScene("Interfaz_Historia");
     }
 }

@@ -693,7 +693,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1491222029}
         m_TargetAssemblyTypeName: BotonPlay, Assembly-CSharp
-        m_MethodName: CargarSiguienteEscena
+        m_MethodName: CargarEscena
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
