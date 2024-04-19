@@ -2,39 +2,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance; // Referencia estática al GameManager para hacerlo accesible desde otros scripts
-
-    private Vector3 posicionJugador; // Variable para almacenar la posición del jugador
-
-    private void Awake()
-    {
-        // Configurar GameManager como un Singleton para asegurar que solo haya una instancia en la escena
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject); // Mantener el GameManager cuando se cargan nuevas escenas
-        }
-        else
-        {
-            Destroy(gameObject); // Destruir instancias adicionales del GameManager
-        }
-    }
-
     // Método para guardar la posición del jugador
-    public void GuardarPosicionJugador(Vector3 posicion)
+    public static void GuardarPosicionJugador(Vector3 posicion)
     {
-        posicionJugador = posicion;
+        // Guardar la posición del jugador en PlayerPrefs
+        PlayerPrefs.SetFloat("PosicionX", posicion.x);
+        PlayerPrefs.SetFloat("PosicionY", posicion.y);
+        PlayerPrefs.SetFloat("PosicionZ", posicion.z);
+        PlayerPrefs.Save(); // Guardar los cambios en PlayerPrefs
     }
 
     // Método para restaurar la posición del jugador
-    public Vector3 RestaurarPosicionJugador()
+    public static Vector3 RestaurarPosicionJugador()
     {
-        return posicionJugador;
-    }
-
-    // Método estático para acceder al GameManager desde otros scripts
-    public static GameManager ObtenerInstancia()
-    {
-        return instance;
+        // Obtener la posición del jugador de PlayerPrefs
+        float x = PlayerPrefs.GetFloat("PosicionX", 0f);
+        float y = PlayerPrefs.GetFloat("PosicionY", 0f);
+        float z = PlayerPrefs.GetFloat("PosicionZ", 0f);
+        
+        // Crear un vector con la posición guardada
+        Vector3 posicionGuardada = new Vector3(x, y, z);
+        
+        return posicionGuardada;
     }
 }
