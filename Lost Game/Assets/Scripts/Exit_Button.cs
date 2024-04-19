@@ -1,11 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitButton : MonoBehaviour
+public class Exit_Button : MonoBehaviour
 {
-    public void Salir()
+    public void CargarSiguienteEscena()
     {
-        // Cargar la escena "Lost_Escene"
         SceneManager.LoadScene("Lost_Escene");
     }
 }
