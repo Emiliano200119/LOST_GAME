@@ -15,11 +15,11 @@ public class InterfazManager : MonoBehaviour
     public void LoadOriginalScene()
     {
         // Obtiene la posición guardada del jugador desde PlayerPrefs
-        float playerX = PlayerPrefs.GetFloat("PlayerX");
-        float playerY = PlayerPrefs.GetFloat("PlayerY");
-        float playerZ = PlayerPrefs.GetFloat("PlayerZ");
+        float PlayerX = PlayerPrefs.GetFloat("PlayerX");
+        float PlayerY = PlayerPrefs.GetFloat("PlayerY");
+        float PlayerZ = PlayerPrefs.GetFloat("PlayerZ");
 
-        Vector3 playerPosition = new Vector3(playerX, playerY, playerZ);
+        Vector3 PlayerPosition = new Vector3(PlayerX, PlayerY, PlayerZ);
 
         // Obtiene la posición guardada de la cámara principal desde PlayerPrefs
         float cameraX = PlayerPrefs.GetFloat("CameraX");
@@ -32,8 +32,8 @@ public class InterfazManager : MonoBehaviour
         SceneManager.LoadScene("Lost_Escene");
 
         // Coloca al jugador en la posición guardada
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.position = playerPosition;
+        GameObject Player = GameObject.FindGameObjectWithTag("Player");
+        Player.transform.position = PlayerPosition;
 
         // Coloca la cámara principal en la posición guardada
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
