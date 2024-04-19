@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Oso_Interfaz.unity
     guid: a2a124ef257e24b9490a69d624473997
+  - enabled: 1
+    path: Assets/Scenes/Interfaz_Foto.unity
+    guid: 6d458c7fee33c4403ae5cd8487189939
   m_configObjects: {}

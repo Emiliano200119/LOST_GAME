@@ -3,23 +3,21 @@ using UnityEngine.SceneManagement;
 
 public class PlacaInteraccion : MonoBehaviour
 {
-    private PlayerPositionManager positionManager; // Referencia al gestor de posición del jugador
-
-    private void Start()
+    public void OnMouseDown()
     {
-        // Obtener una referencia al gestor de posición del jugador en tiempo de ejecución
-        positionManager = FindObjectOfType<PlayerPositionManager>();
-        if (positionManager == null)
-        {
-            positionManager.GuardarPosicionJugador(transform.position);
+        // Guarda la posición actual del jugador antes de cargar la escena de la interfaz
+        PlayerPrefs.SetFloat("PlayerX", GameObject.FindGameObjectWithTag("Player").transform.position.x);
+        PlayerPrefs.SetFloat("PlayerY", GameObject.FindGameObjectWithTag("Player").transform.position.y);
+        PlayerPrefs.SetFloat("PlayerZ", GameObject.FindGameObjectWithTag("Player").transform.position.z);
 
-            Debug.LogError("No se encontró el PlayerPositionManager en la escena.");
-        }
-    }
+        // Guarda la posición actual de la cámara principal antes de cargar la escena de la interfaz
+        PlayerPrefs.SetFloat("CameraX", GameObject.FindGameObjectWithTag("MainCamera").transform.position.x);
+        PlayerPrefs.SetFloat("CameraY", GameObject.FindGameObjectWithTag("MainCamera").transform.position.y);
+        PlayerPrefs.SetFloat("CameraZ", GameObject.FindGameObjectWithTag("MainCamera").transform.position.z);
 
-    private void OnMouseDown()
-    {
+        PlayerPrefs.Save();
+
+        // Carga la escena de la interfaz
         SceneManager.LoadScene("Interfaz_Placa");
     }
-    
 }
