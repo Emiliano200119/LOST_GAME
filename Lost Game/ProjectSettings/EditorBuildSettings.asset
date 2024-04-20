@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Interfaz_Foto.unity
     guid: 6d458c7fee33c4403ae5cd8487189939
+  - enabled: 1
+    path: Assets/Scenes/Final_Interfaz.unity
+    guid: 5847396e7665846d1a4e51f5dbc225fa
   m_configObjects: {}
